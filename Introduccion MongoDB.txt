@@ -1,0 +1,55 @@
+Practica #7 Introducción a Bases de Datos Distribuidas- NoSQL - MongoDB
+
+Hecho por:
+Wander Nova Fernandez 
+
+
+
+1. Crear una colección en MongoDB llamada personas
+
+db.createCollecion("Personas")
+
+
+2. Insertar 10 personas con los siguientes atributos (nombre, edad, sexo, telefono)
+ #1
+> db.personas.insert({Nombre:"Wander",Edad:"20",Sexo:"Masculino",Telefono:"8293773414"})
+#2
+> db.personas.insert({Nombre:"Jorge",Edad:"19",Sexo:"Masculino",Telefono:"80975984714"})
+#3
+> db.personas.insert({Nombre:"Amaya",Edad:"25",Sexo:"Femenino",Telefono:"12345678"})
+#4
+> db.personas.insert({Nombre:"Amanda",Edad:"15",Sexo:"Femenino",Telefono:"123785678"})
+#5
+> db.personas.insert({Nombre:"Brenda",Edad:"75",Sexo:"Femenino",Telefono:"8093685474"})
+#6
+> db.personas.insert({Nombre:"Pedro",Edad:"45",Sexo:"Masculino",Telefono:"8093685484"})
+#7
+> db.personas.insert({Nombre:"Victor",Edad:"85",Sexo:"Masculino",Telefono:"8093681284"})
+#8
+> db.personas.insert({Nombre:"Jonny",Edad:"35",Sexo:"Masculino",Telefono:"80945781234"})
+#9
+> db.personas.insert({Nombre:"Karla",Edad:"18",Sexo:"Femenino",Telefono:"8097894514"})
+#10
+> db.personas.insert({Nombre:"Marlenis",Edad:"18",Sexo:"Femenino",Telefono:"8097894584"})
+
+3. Leer las 10 personas insertadas
+
+db.personas.find().pretty()
+
+
+4. Leer solo aquellas personas que sean de sexo masculino
+
+> db.personas.find({Sexo:"Masculino"}).pretty()
+
+5. Eliminar aquellas personas que sean de sexo masculino
+
+> db.personas.remove({Sexo:"Masculino"})
+
+
+6. Actualizar todas las personas y ponerla la edad 24
+
+> db.personas.updateMany({Sexo:"Femenino"},{$set:{Edad:"24"}})
+
+
+
+
